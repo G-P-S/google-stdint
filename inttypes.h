@@ -36,7 +36,7 @@
 #ifndef _MSC_INTTYPES_H_ // [
 #define _MSC_INTTYPES_H_
 
-#if _MSC_VER &gt; 1000
+#if _MSC_VER > 1000
 #pragma once
 #endif
 
@@ -284,7 +284,7 @@ imaxdiv_t __cdecl imaxdiv(intmax_t numer, intmax_t denom)
    result.quot = numer / denom;
    result.rem = numer % denom;
 
-   if (numer &lt; 0 &amp;&amp; result.rem &gt; 0) {
+   if (numer < 0 && result.rem > 0) {
       // did division wrong; must fix up
       ++result.quot;
       result.rem -= denom;
